@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import "./AgregarPalabra.css";
 import Swal from 'sweetalert2';
 
@@ -8,13 +8,10 @@ function AgregarPalabras(props) {
   function handleKeyPress(event) {
     let key = event.key;
     let noNumero=isNaN(+event.key);
-    let regex = /[A-Z,a-z,ñ,Ñ]\./;
-    //if (!regex.test(key) || !isNaN(key)) {
-     /* 
-    if(!noNumero){
+    let regex = /[A-Za-zñÑ]/;
+    if (!regex.test(key) ) {
       event.preventDefault();
     }
-    */
   }
   function handleInput(event) {
     let palabra = event.target.value.trim();
@@ -86,9 +83,6 @@ function AgregarPalabras(props) {
     <div className="div_seccion_agrega">
       <div className="div_agrega">
         <p>Agrega las palabras de desees:</p>
-        {/*<p id="add-warning">
-          (No acepta números)
-        </p>*/}
         <form onSubmit={(e) => handlerSubmit(e)}>
           <input
             className="entrada_palabra"

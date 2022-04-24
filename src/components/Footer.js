@@ -4,14 +4,16 @@ function Footer() {
   let fecha=new Date().getFullYear();
   return (
           <footer>
-            <p>Por:  &copy; Gasgamdev {fecha}</p>
-            <p> gasgamdev@gmail.com</p>
+            <div>
+              <p><a href='https://github.com/devjsv/ahorcado'>Repositorio de github</a> </p>
+            </div>
+            <p>Autor: Gasgamdev {fecha}</p>
             <div className="repositorio">
-                    <p>
+                    <div>
                       <a rel="noreferrer" href="https://github.com/gasgam" target="_blank" >
                         <i className="fab fa-github"></i>
                       </a>
-                    </p>
+                    </div>
             </div>
           </footer>
   );

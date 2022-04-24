@@ -4,7 +4,7 @@ footer{
     min-height: calc(15px + 6vmin);
     width: 100%;
     font-size: calc(8px + 2vmin);
-    color: black;
+    color: #000;
 
     padding-bottom: 20px;
     font-size: 1.2em;
@@ -12,6 +12,9 @@ footer{
 }
 footer div, footer p{
     padding: 10px 15px;
+}
+footer a{
+    color: #d70ea8;
 }
 .repositorio, footer p{
     display: inline-block;
